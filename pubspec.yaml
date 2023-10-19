@@ -13,11 +13,18 @@ dependencies:
   melos:
 
   flutter_module:
-    git:
-      url: https://Thanh54833@bitbucket.org/concung/cci.mobile.fluttermodule.git
-      ref: beta_new
+    path: ../flutter_module
 
 dependency_overrides:
+
+  omicall_flutter_plugin:
+    git:
+      url: https://github.com/VIHATTeam/OMICALL-Flutter-SDK.git
+      ref: 3.0.13
+  livetalk_sdk:
+    git:
+      url: https://github.com/VIHATTeam/OMICALL_CHAT_SDK.git
+      ref: v0.0.9
 
   package_info_plus: ^4.0.2
   permission_handler: 10.0.2
