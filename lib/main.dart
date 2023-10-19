@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,11 +11,12 @@ export 'package:flutter_module/src/entry_point/home/home_entry_point.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-
   await ScreenUtil.ensureScreenSize();
   HttpOverrides.global = OmicallHttpOverrides();
 
-  return HomeEntryPoint().main();
+  var homeEntryPoint = HomeEntryPoint();
+  homeEntryPoint.setEnableRunFlutterModule();
+  return homeEntryPoint.main();
 }
 
 class OmicallHttpOverrides extends HttpOverrides {
