@@ -21,6 +21,7 @@ dependency_overrides:
     git:
       url: https://github.com/VIHATTeam/OMICALL-Flutter-SDK.git
       ref: 3.0.13
+
   livetalk_sdk:
     git:
       url: https://github.com/VIHATTeam/OMICALL_CHAT_SDK.git
