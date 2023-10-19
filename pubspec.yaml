@@ -27,6 +27,11 @@ dependency_overrides:
       url: https://github.com/VIHATTeam/OMICALL_CHAT_SDK.git
       ref: v0.0.9
 
+  package_management:
+    git:
+      url: https://Thanh54833@bitbucket.org/concung/cci.mobile.flutter.packagemanagement.git
+      ref: 0.0.2
+
   package_info_plus: ^4.0.2
   permission_handler: 10.0.2
   ffi: ^1.1.2
