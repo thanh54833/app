@@ -1,0 +1,40 @@
+# melos_managed_dependency_overrides: package_info_plus,permission_handler,ffi,win32,flutter_module,base,bonus_point,cc_library,cc_plugin,clinic_finder,coffee_playground,common_widget,developer_support,embedded_browser,live,magazine,package_management,pharmacy_finder,search,store_finder,switchboard
+dependency_overrides:
+  package_info_plus: ^4.0.2
+  permission_handler: 10.0.2
+  ffi: ^1.1.2
+  win32: ^3.0.0
+  flutter_module:
+    path: ../flutter_module
+  base:
+    path: ../flutter_module/modules/base
+  bonus_point:
+    path: ../../mini_apps/bonus_point
+  cc_library:
+    path: ../../packages/cc_library
+  cc_plugin:
+    path: ../../packages/cc_plugin
+  clinic_finder:
+    path: ../../mini_apps/clinic_finder
+  coffee_playground:
+    path: ../../mini_apps/coffee_playground
+  common_widget:
+    path: ../flutter_module/modules/common_widget
+  developer_support:
+    path: ../../packages/developer_support
+  embedded_browser:
+    path: ../../mini_apps/embedded_browser
+  live:
+    path: ../../mini_apps/live
+  magazine:
+    path: ../../mini_apps/magazine
+  package_management:
+    path: ../../packages/package_management
+  pharmacy_finder:
+    path: ../../mini_apps/pharmacy_finder
+  search:
+    path: ../../mini_apps/search
+  store_finder:
+    path: ../../mini_apps/store_finder
+  switchboard:
+    path: ../../mini_apps/switchboard
