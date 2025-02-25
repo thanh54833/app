@@ -1,6 +1,5 @@
 import UIKit
 import Flutter
-import FBSDKCoreKit
 
 import omicall_flutter_plugin
 import OmiKit
@@ -11,7 +10,7 @@ func registerPlugins(registry: FlutterPluginRegistry) {
     GeneratedPluginRegistrant.register(with: registry)
 }
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
 
    var pushkitManager: PushKitManager?
@@ -56,7 +55,7 @@ func registerPlugins(registry: FlutterPluginRegistry) {
 
         SwiftFlutterUploaderPlugin.registerPlugins = registerPlugins
 
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)//facebook
+//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)//facebook
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
