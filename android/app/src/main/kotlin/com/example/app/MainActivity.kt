@@ -68,6 +68,19 @@ class MainActivity: FlutterActivity() {
 //            insets
 //        }
 //    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        try {
+            OmicallsdkPlugin.onOmiIntent(this, intent)
+        } catch (e: Throwable) {
+            e.printStackTrace()
+        }
+    }
+
+    override fun onResume(){
+        super.onResume()
+        OmicallsdkPlugin.onResume(this);
+    }
 
     // thanh.ph omicall
     override fun onRequestPermissionsResult(

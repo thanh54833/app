@@ -1,5 +1,10 @@
-# melos_managed_dependency_overrides: provider,ffi,uuid,socket_io_client,omicall_flutter_plugin,livetalk_sdk,base,common_widget,flutter_module,package_management,pharmacy_finder,live,bonus_point,clinic_finder,coffee_playground,embedded_browser,magazine,store_finder
+# melos_managed_dependency_overrides: geolocator_android,package_management,provider,ffi,uuid,socket_io_client,omicall_flutter_plugin,livetalk_sdk,http,base,common_widget,flutter_module,live,embedded_browser,sqlite3,sqflite_common_ffi,bonus_point
 dependency_overrides:
+  geolocator_android: 4.6.0
+  package_management:
+    git:
+      url: https://bitbucket.org/concung/cci.mobile.flutter.packagemanagement.git
+      ref: 1.0.8
   provider: 5.0.0
   ffi: 2.1.3
   uuid: 3.0.7
@@ -7,34 +12,23 @@ dependency_overrides:
   omicall_flutter_plugin:
     git:
       url: https://github.com/VIHATTeam/OMICALL-Flutter-SDK.git
-      ref: 3.0.13
+      ref: 3.1.40
   livetalk_sdk:
     git:
       url: https://github.com/VIHATTeam/OMICALL_CHAT_SDK.git
       ref: v0.0.9
+  http: ^0.13.1
   base:
     path: ../flutter_module/modules/base
   common_widget:
     path: ../flutter_module/modules/common_widget
   flutter_module:
     path: ../flutter_module
-  package_management:
-    git:
-      url: https://bitbucket.org/concung/cci.mobile.flutter.packagemanagement.git
-      ref: 1.0.8
-  pharmacy_finder:
-    path: ../../mini_apps/cci.mobile.fluttermodule.pharmacyfinder
   live:
-    path: ../../mini_apps/cci.mobile.fluttermodule.live
-  bonus_point:
-    path: ../../mini_apps/cci.mobile.fluttermodule.bonuspoint
-  clinic_finder:
-    path: ../../mini_apps/cci.mobile.fluttermodule.clinicfinder
-  coffee_playground:
-    path: ../../mini_apps/cci.mobile.fluttermodule.coffeeplayground
+    path: ../../mini_apps/live
   embedded_browser:
-    path: ../../mini_apps/cci.mobile.fluttermodule.embeddedbrowser
-  magazine:
-    path: ../../mini_apps/cci.mobile.fluttermodule.magazine
-  store_finder:
-    path: ../../mini_apps/cci.mobile.fluttermodule.storefinder
+    path: ../../mini_apps/embedded_browser
+  sqlite3: 1.11.2
+  sqflite_common_ffi: 2.3.0
+  bonus_point:
+    path: ../../mini_apps/bonus_point
