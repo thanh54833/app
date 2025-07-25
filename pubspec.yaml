@@ -1,0 +1,86 @@
+name: app
+description: A new Flutter project.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.1.5 <4.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons:
+  flutter_screenutil: 5.9.3
+  package_info_plus: 
+  permission_handler: 10.3.0
+  workmanager: ^0.5.2
+  melos:
+
+  package_management:
+    git:
+      url: https://bitbucket.org/concung/cci.mobile.flutter.packagemanagement.git
+      ref: 1.0.8
+
+  flutter_module:
+    path: ../flutter_module
+  flutter_lints: ^3.0.1
+
+dependency_overrides:
+  base:
+    path: ../flutter_module/modules/base
+  common_widget:
+    path: ../flutter_module/modules/common_widget
+  http: 0.13.5
+  google_fonts: 6.2.1
+  provider: 5.0.0
+  ffi: 2.1.3
+  uuid: 3.0.7
+  socket_io_client: 2.0.1
+  sqlite3: 2.1.0
+  omicall_flutter_plugin:
+    git:
+      url: https://github.com/VIHATTeam/OMICALL-Flutter-SDK.git
+      ref: 3.1.40
+
+  livetalk_sdk:
+    git:
+      url: https://github.com/VIHATTeam/OMICALL_CHAT_SDK.git
+      ref: v0.0.9
+  sqflite_common_ffi: 2.3.0+2
+  geolocator_android: 4.6.1
+  video_thumbnail: 0.5.6
+  flutter_uploader:
+    git:
+      url: https://github.com/flutterconcung/flutter_uploader_plus.git
+      ref: main
+  flutter_share:
+    git:
+      url: https://github.com/flutterconcung/flutter_share.git
+      ref: master
+  gl_canvas:
+    git:
+      url: https://github.com/flutterconcung/gl_canvas.git
+      ref: master
+  image_gallery_saver:
+    git:
+      url: https://github.com/flutterconcung/image_gallery_saver.git
+      ref: master
+  images_picker:
+    git:
+      url: https://github.com/flutterconcung/image_picker.git
+      ref: main
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/i18n/
+    - assets/.env
+    - assets/env
+  fonts:
+    - family: ConCung
+      fonts:
+        - asset: fonts/ConCung.ttf

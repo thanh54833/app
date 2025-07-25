@@ -1,0 +1,63 @@
+# melos_managed_dependency_overrides: base,common_widget,http,google_fonts,provider,ffi,uuid,socket_io_client,sqlite3,omicall_flutter_plugin,livetalk_sdk,sqflite_common_ffi,geolocator_android,bonus_point,clinic_finder,embedded_browser,flutter_module,magazine,package_management,pharmacy_finder,store_finder
+dependency_overrides:
+  base:
+    path: ../flutter_module/modules/base
+  common_widget:
+    path: ../flutter_module/modules/common_widget
+  http: 0.13.5
+  google_fonts: 6.2.1
+  provider: 5.0.0
+  ffi: 2.1.3
+  uuid: 3.0.7
+  socket_io_client: 2.0.1
+  sqlite3: 2.1.0
+  omicall_flutter_plugin:
+    git:
+      url: https://github.com/VIHATTeam/OMICALL-Flutter-SDK.git
+      ref: 3.1.40
+  livetalk_sdk:
+    git:
+      url: https://github.com/VIHATTeam/OMICALL_CHAT_SDK.git
+      ref: v0.0.9
+  sqflite_common_ffi: 2.3.0+2
+  geolocator_android: 4.6.1
+  bonus_point:
+    path: ../../mini_apps/cci.mobile.fluttermodule.bonuspoint
+  clinic_finder:
+    path: ../../mini_apps/cci.mobile.fluttermodule.clinicfinder
+  embedded_browser:
+    path: ../../mini_apps/cci.mobile.fluttermodule.embeddedbrowser
+  flutter_module:
+    path: ../flutter_module
+  magazine:
+    path: ../../mini_apps/cci.mobile.fluttermodule.magazine
+  package_management:
+    path: ../../packages/cci.mobile.flutter.packagemanagement
+  pharmacy_finder:
+    path: ../../mini_apps/cci.mobile.fluttermodule.pharmacyfinder
+  store_finder:
+    path: ../../mini_apps/cci.mobile.fluttermodule.storefinder
+  flutter_uploader:
+    git:
+      url: https://github.com/flutterconcung/flutter_uploader_plus.git
+      ref: main
+  flutter_share:
+    git:
+      url: https://github.com/flutterconcung/flutter_share.git
+      ref: master
+  gl_canvas:
+    git:
+      url: https://github.com/flutterconcung/gl_canvas.git
+      ref: master
+  image_gallery_saver:
+    git:
+      url: https://github.com/flutterconcung/image_gallery_saver.git
+      ref: master
+  video_thumbnail:
+    git:
+      url: https://github.com/flutterconcung/video_thumbnail.git
+      ref: master
+  images_picker:
+    git:
+      url: https://github.com/flutterconcung/image_picker.git
+      ref: main
