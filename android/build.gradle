@@ -1,0 +1,98 @@
+buildscript {
+    ext.kotlin_version = '1.9.20'
+    repositories {
+        google()
+        mavenCentral()
+
+        jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url "https://gitlab.com/api/v4/projects/47675059/packages/maven"
+            credentials(HttpHeaderCredentials) {
+                name = "Private-Token"
+                value = "glpat-AzyyrvKz9_pjsgGW4xfp"
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
+        maven {
+            url "https://maven.pkg.github.com/omicall/OMICall-SDK"
+            credentials {
+                username = "omicall"
+                password = "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"
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            project.android {
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_17
+                    targetCompatibility JavaVersion.VERSION_17
+                }
+            }
+            if (project.plugins.hasPlugin("kotlin-android")) {
+                project.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+                    kotlinOptions {
+                        jvmTarget = "17"
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url "https://gitlab.com/api/v4/projects/47675059/packages/maven"
+            credentials(HttpHeaderCredentials) {
+                name = "Private-Token"
+                value = "glpat-AzyyrvKz9_pjsgGW4xfp"
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
+        maven {
+            url "https://maven.pkg.github.com/omicall/OMICall-SDK"
+            credentials {
+                username = "omicall"
+                password = "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"
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

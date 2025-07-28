@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-  >
+    package="com.example.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
@@ -98,10 +97,10 @@
             android:authorities="com.facebook.app.FacebookContentProvider565629662330222"
             android:exported="true" />
 
-        <!-- <activity
+        <activity
             android:name="vn.vihat.omicall.omisdk.TransparentActivity"
             android:exported="false"
-            android:theme="@style/TranslucentTheme" /> -->
+            android:theme="@style/TranslucentTheme" />
         <receiver
             android:name="vn.vihat.omicall.omisdk.receiver.FirebaseMessageReceiver"
             android:exported="true"
@@ -113,7 +112,6 @@
 
         <service
             android:name="vn.vihat.omicall.omisdk.service.NotificationService"
-            android:foregroundServiceType="phoneCall"
             android:exported="false"></service>
 
     </application>
