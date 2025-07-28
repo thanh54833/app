@@ -64,7 +64,7 @@ allprojects {
             url "https://gitlab.com/api/v4/projects/47675059/packages/maven"
             credentials(HttpHeaderCredentials) {
                 name = "Private-Token"
-                value = "token"
+                value = "glpat-AzyyrvKz9_pjsgGW4xfp"
             }
             authentication {
                 header(HttpHeaderAuthentication)
